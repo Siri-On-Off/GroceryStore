@@ -6,28 +6,16 @@ namespace Grocerystore
 {
     public class Lebensmittel : Artikel
     {
-        private bool vegan;
-
+        public bool Vegan { get; set; }
+        public List<Artikelgruppe> Gruppe { get; set; }
         private List<Artikelgruppe> gruppe = new List<Artikelgruppe>();
 
         public Lebensmittel(Artikelgruppe artikelgruppe, int artikelnummer, string bezeichnung, double einkaufspreis,
             double preis, int bestand, string einheit, bool vegan)
             : base(artikelgruppe, artikelnummer, bezeichnung, einkaufspreis, preis, bestand, einheit)
         {
-            this.vegan = vegan;
-
+            this.Vegan = vegan;
         }
 
-        public bool Vegan
-        {
-            get { return vegan; }
-            set { vegan = value; }
-        }
-
-        public List<Artikelgruppe> Gruppe
-        {
-            get { return gruppe; }
-            set { gruppe = value; }
-        }
     }
 }
