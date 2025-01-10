@@ -1,0 +1,15 @@
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\bin\Debug\net8.0\GroceryStore.exe
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\bin\Debug\net8.0\GroceryStore.deps.json
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\bin\Debug\net8.0\GroceryStore.runtimeconfig.json
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\bin\Debug\net8.0\GroceryStore.dll
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\bin\Debug\net8.0\GroceryStore.pdb
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.AssemblyInfoInputs.cache
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.AssemblyInfo.cs
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.csproj.CoreCompileInputs.cache
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.sourcelink.json
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.dll
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\refint\GroceryStore.dll
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.pdb
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\GroceryStore.genruntimeconfig.cache
+C:\Users\schule\RiderProjects\GroceryStore\GroceryStore\obj\Debug\net8.0\ref\GroceryStore.dll
