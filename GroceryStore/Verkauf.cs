@@ -60,6 +60,8 @@ namespace Grocerystore
 
         public void PrintRechnung()
         {
+            if (isRechnung)
+        {
             Console.WriteLine($"Rechnung Nr. {auftragsnummer}");
             Console.WriteLine("--------------------------------------------------");
             double gesamtbetrag = 0;
@@ -87,7 +89,52 @@ namespace Grocerystore
 
             Console.WriteLine($"Gesamtbetrag: {gesamtbetrag:C}");
             Console.WriteLine("--------------------------------------------------");
-            Console.WriteLine(isRechnung ? "Rechnung abgeschlossen." : "Bestellung abgeschlossen.");
+            Console.WriteLine(isRechnung ? "Rechnung abgeschlossen." : "Bestellung abgeschlossen.\n");
         }
+            else
+            {
+                PrintRetour();
+            }
+        
+        
+        }
+        private void PrintRetour()
+        {
+            Console.WriteLine($"Retoure Nr. {auftragsnummer}");
+            Console.WriteLine("--------------------------------------------------");
+            double gesamtbetrag = 0;
+
+            foreach (var position in positionen)
+            {
+                int artikelnummer = position.Key;
+                int menge = position.Value;
+                Artikel artikel = art.GetArtikelByArtikelnummer(artikelnummer);
+
+                if (artikel != null)
+                {
+                    double einzelpreis = artikel.Preis;
+                    double gesamtpreis = einzelpreis * menge;
+                    gesamtbetrag += gesamtpreis;
+
+                    // Drucke die Artikelinformationen für die Retoure
+                    Console.WriteLine($"Artikel: {artikel.Bezeichnung}");
+                    Console.WriteLine($"Artikelnummer: {artikel.Artikelnummer}");
+                    Console.WriteLine($"Menge zurückgegeben: {menge}");
+                    Console.WriteLine($"Einzelpreis: {einzelpreis:C}");
+                    Console.WriteLine($"Gesamtpreis (Retoure): {gesamtpreis:C}");
+                    Console.WriteLine("--------------------------------------------------");
+
+                    // Bestandsänderung für die Retoure: Bestände wieder aufstocken
+                    BestandsAenderung(artikelnummer, -menge); // Negative Menge, da Artikel zurückgegeben werden
+                }
+            }
+
+            Console.WriteLine($"Gesamtbetrag der Retoure: {gesamtbetrag:C}");
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(isRechnung ? "Retoure abgeschlossen." : "Bestellung abgeschlossen.\n");
+
+        }
+
+        
     }
 }
