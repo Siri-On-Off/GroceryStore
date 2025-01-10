@@ -8,7 +8,6 @@ namespace Grocerystore
     {
         public bool Vegan { get; set; }
         public List<Artikelgruppe> Gruppe { get; set; }
-        private List<Artikelgruppe> gruppe = new List<Artikelgruppe>();
 
         public Lebensmittel(Artikelgruppe artikelgruppe, int artikelnummer, string bezeichnung, double einkaufspreis,
             double preis, int bestand, string einheit, bool vegan)
